@@ -1,0 +1,137 @@
+body{
+  background: #9BD5E0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapCase{
+  /* border: #fff 5px solid; */
+  width: 100%;
+  height: 98vh;
+  margin: 5px;
+  /* 對內容排版 置中*/
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: center;
+}
+
+.colorCase{
+  margin-top: 20vh ;
+  /* 調整pinkCube大小 */
+  /* border: #E3589B 1px solid; */
+  width: 200px;
+  height: 200px;
+  color:#fff;
+}
+.moveDownCase{
+  position: relative;
+  animation-name: moveDown;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes moveDown{
+  0%{
+    top:-1000px;
+    font-size:100px;
+  }
+  100%{
+    top:0px;
+    font-size:50px;
+  }
+}
+.moveUpCase{
+  position: relative;
+  animation-name: moveUp;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes moveUp{
+  0%{
+    bottom:-1000px;
+    font-size:100px;
+  }
+  100%{
+    bottom:0px;
+    font-size:50px;
+  }
+}
+
+.colorCube{
+  width: 95%;
+  height: 95%;
+  margin: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+.colorChange1{
+  position: relative;
+  animation-name: changeColor1;
+  animation-delay: 5s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes changeColor1{
+  0%{
+    background-color: #fff;
+  }
+  25%{
+    background-color: #E3589B;
+    font-size: 100px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.219);
+  }
+  75%{
+    font-size: 60px;
+  }
+  100%{
+    background-color: #E3589B;
+    font-size: 50px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.219);
+  }
+}
+.colorChange2{
+  position: relative;
+  animation-name: changeColor2;
+  animation-delay: 7s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes changeColor2{
+  0%{
+    background-color: #fff;
+  }
+  25%{
+    background-color: #F9C541;
+    font-size: 100px;
+    font-weight: 700;
+    color: #fff;
+  }
+  75%{
+    font-size: 60px;
+  }
+  100%{
+    background-color: #F9C541;
+    font-size: 95px;
+    font-weight: 700;
+    color: #fff;
+  }
+}
+.colorChange2 p{
+  position: absolute;
+  z-index:1;
+}
+b{
+  position: relative;
+  left:25px;
+  color: rgb(8, 32, 63);
+}
+b:hover{
+width: 200px;
+height: 200px;
+bottom: 5px;
+text-emphasis: shadow 1px;
+}

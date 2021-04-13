@@ -1,0 +1,279 @@
+*{
+  box-sizing: border-box;
+  cursor: context-menu;
+}
+body{
+  background-color: rgb(155, 212, 224);
+}
+.restart{
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+.btn_clear{
+  display: none;
+}
+.gameShowcase{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.left-section{
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.right-section{
+  width: 25%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.yellowBox{
+  width: 20%;
+  height: 25%;
+  background: #F9C541;
+  text-align: right;
+  color: #9BD5E0;
+  font-size: 5px;
+  font-weight: 600;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  transition: 1s;
+}
+.yellowBox .btn-title{
+  width: 100%;
+  height: 30%;
+  position: relative;
+  left: 75%;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  transition:1s;
+}
+.btn-title:hover{
+  color:  #007bff;
+  text-decoration: underline;
+}
+.yellowBox:hover{
+  width: 75%;
+  font-size: 20px;
+  text-align: center;
+  color: #E3589B;
+}
+.pinkBox{
+  width: 20%;
+  height: 25%;
+  background:#E3589B;
+  color:rgb(155, 212, 224);
+  font-size: 5px;
+  font-weight: 600;
+  transition: 1s;
+}
+.pinkBox .btn-title{
+  position: relative;
+  left:-150px;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  font-size: 50px;
+  color: #fff;
+}
+.pinkBox .btn-title:hover{
+  color: #007bff;
+}
+
+.pinkBox:hover{
+  width: 75%;
+  font-size: 20px;
+  text-align: center;
+  color: #F9C541;
+}
+.main-section{
+  /*layer1置中排版 */
+  width: 50%;
+  height: 100vh;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} 
+.layer1{
+  /*layer2位置排版 */ 
+  width: 450px;
+  height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 1%;
+  text-align: center;
+  transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.layer1:hover{
+  position: relative;
+  top: 0.5px;
+}
+#main-title{
+  color: #007bff;
+  font-weight: 600;
+  font-size: 50px;
+}
+a:hover{
+  color:#007bff;
+}
+.intro{
+margin-top: 15px;
+text-align: center;
+color:#007bff;
+font-weight: 600;
+}
+.noshow{
+  font-size: 0px;
+  color: rgba(255, 255, 255, 0);
+}
+
+.layer2{
+  /* blankbox排版 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #007bff57;
+}
+.blankbox{
+  width: 100px;
+  height: 100px;
+  background: rgb(18, 59, 121);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: border-radius;
+  transition-duration: 1s;
+}
+
+.colorbox{
+  width: 95%;
+  height: 95%;
+  background: rgb(232, 247, 250);
+  border-radius: 5%;
+  color: rgb(18, 59, 121);;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 700;
+
+  transition-property: border-radius;
+  transition-duration: 1s;
+
+}
+.colorbox:hover{
+  border-radius: 25%;
+  background: rgb(129, 180, 190);
+}
+
+.colorbox_finish{
+  animation-name: colorboxRotate;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes colorboxRotate{
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+    background-color: #F9C541;
+    color: #F9C541;
+  }
+}
+
+.layer1_finish{
+  animation-name: layer1Rotate;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  transition-property: transform;
+  transition-duration: 8s;
+}
+
+@keyframes layer1Rotate{
+  0%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+    width: 400px;
+    height: 400px;
+  }
+}
+
+
+.layer2_finish{
+  animation-name: layer2Rotate;
+  animation-duration: 9s;
+  animation-delay: 2s;
+}
+@keyframes layer2Rotate{
+  0%{
+    transform: rotateY(0deg);
+  }
+  100%{
+    transform: rotateY(360deg);
+  }
+}
+.box_finish{
+  animation-name: clearText;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes clearText{
+  0%{
+    transform: scaleY(100px);
+    opacity: 1;
+  }
+  100%{
+    transform: scaleY(0px);
+    opacity: 0;
+  }
+}
+.h1_finish{
+  position: absolute;
+  z-index: 1;
+  top:10%;
+  font-size: 100px;
+  margin: 10px;
+  animation-name: h1Rotate;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes h1Rotate{
+  0%{
+    transform: rotateX(0deg);
+  }
+  100%{
+    transform: rotateX(360deg);
+    top: 5%;
+    font-size: 150px;
+    color: rgba(227, 88, 155, 0.747);
+  }
+}
+
+.change_finish{
+  animation-name: colorchange;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+@keyframes colorchange{
+  0%{
+    background: #9BD5E0;
+  }
+  100%{
+    /* background: #E3589B; */
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/cube_gamePage.css">
+</head>
+<body>
+
+  <div class="gameShowcase">
+
+    <!-- 左邊區塊 -->
+    <div class="left-section">
+      <div class="yellowBox">
+        <p class="btn-title">
+          <b><a class="btn_start">Start</a></b>
+        </p>
+        <p>Is this set too hard for you? Get a new Number Set</p>
+      </div>
+      <div class="yellowBox">
+          <p class="btn-title  btn_easy"><b>EasyVersion</b></p>
+          <p>Try easy version, and see what it gonna happend after finish this game!</p>
+        </div>
+    </div>
+    <!-- 中間遊戲主畫面 -->
+    <div class="main-section">
+        <div class="layer1">
+          <h1 id="main-title"><b><a href="/cube_index.html">Cube Fun</a></b></h1> 
+          <div class="layer2">
+            <div class="blankbox  x1y4" data="1" finish="1"></div>
+            <div class="blankbox  x2y4" data="1" finish="2"></div>
+            <div class="blankbox  x3y4" data="1" finish="3"></div>
+            <div class="blankbox  x4y4" data="1" finish="4"></div>
+          </div>
+          <div class="layer2">
+            <div class="blankbox  x1y3" data="1" finish="5"></div>
+            <div class="blankbox  x2y3" data="1" finish="6"></div>
+            <div class="blankbox  x3y3" data="1" finish="7"></div>
+            <div class="blankbox  x4y3" data="1" finish="8"></div>
+          </div>
+          <div class="layer2">
+            <div class="blankbox  x1y2" data="1" finish="9"></div>
+            <div class="blankbox  x2y2" data="1" finish="10"></div>
+            <div class="blankbox  x3y2" data="1" finish="11"></div>
+            <div class="blankbox  x4y2" data="1" finish="12"></div>
+          </div>
+          <div class="layer2">
+            <div class="blankbox  x1y1" data="1" finish="13"></div>
+            <div class="blankbox  x2y1" data="1" finish="14"></div>
+            <div class="blankbox  x3y1" data="1" finish="15"></div>
+            <div class="blankbox  x4y1" data="0"></div>
+          </div>
+        </div>      
+        <div class="intro">
+            <h1 class="noshow"><b>You Win</b></h1>
+            <p>Clicking <b>Start</b> begins fun time. After order all numbers, you can click the <b>Finish</b>.</p>    
+        </div>
+    </div>
+    <!-- 右邊區塊 -->
+    <div class="right-section">
+        <div class="pinkBox">
+          <p class="btn-title btn2"><b>Finish</b></p> 
+          <p>Do you order all numbers of the set!! click Finish and see result!</p>
+        </div>
+        <div class="pinkBox">
+          <p class="btn-title">
+            <b><a class="restart" href="/cube_gamePage.html">Restart</a></b> 
+          </P>
+          <p>Do you order all numbers of the set!! click Finish and see result!</p>
+        </div>
+    </div>
+
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>  
+<script src="js/cube_game.js"></script>
+</body>
+</html>
